@@ -33,3 +33,6 @@
 ; karekök number number -> number
 ; karekökü bulunacak sayı ve bir tahminden bir karekök bulur.
 (define karekök (λ (k t) (bul-kök (λ (x) (- (* x x) k)) t)))
+
+
+(define katsayılar->fonksiyon (λ (p) (λ (x) (foldr (λ (l r) (+ l (* x r))) 0 p))))
